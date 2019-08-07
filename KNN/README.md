@@ -18,4 +18,4 @@
   2. 从该节点出发，依次回退到父节点；
   3. 不断查找与目标点最近邻的节点，在确定不可能存在更接近的结点时终止。
   * Example：
-  ![kd tree.png](./kd tree-1.png)
+  <div align=center><img src="kd tree-1.png"></div>
