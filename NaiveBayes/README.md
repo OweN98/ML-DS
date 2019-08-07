@@ -6,17 +6,20 @@
     1. 首先基于特征条件独立假设学习输入输出的联合概率分布
     2. 基于模型，对于给定的输入x，利用贝叶斯定理求出后验概率最大的输出y。
 
-<img src="nba.png" width = "600" height = "900" >
-
+![nba.png](attachment:nba.png)
 
 ### 后验概率最大化的意义
-* <img src="nba-1.png" width = "600" height = "900" >
+
+* ![nba-1.png](attachment:nba-1.png)
 
 ## 朴素贝叶斯的参数估计
+
 * 应用极大似然估计法估计相应的概率
 
 ## 朴素贝叶斯算法
-* <img src="nba-2.png" width = "600" height = "900" >
+
+* ![nba-2.png](attachment:nba-2.png)
 
 ## 贝叶斯估计
-* <img src="nba-3.png" width = "600" height = "900" >
+
+* ![nba-3.png](attachment:nba-3.png)
