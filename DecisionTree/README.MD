@@ -26,7 +26,7 @@
 * 选择准则：**信息增益(information gain)** 或 **信息增益比(information gain ratio)**
 
 ## 信息增益
-* **熵(entropy)**表示随机变量不确定性的度量。**条件熵(conditional entropy)**是在已知随机变量X的条件下随机变量Y的不确定性。当熵和条件熵的概率由数据估计得到时，则成为**经验熵(empirical entropy)**和**经验条件熵(emperial conditional entropy)**。
+* 熵(entropy)表示随机变量不确定性的度量。条件熵(conditional entropy)是在已知随机变量X的条件下随机变量Y的不确定性。当熵和条件熵的概率由数据估计得到时，则成为**经验熵(empirical entropy)**和**经验条件熵(emperial conditional entropy)**。
 * 信息增益定义为集合的经验熵和某特征给定条件下集合的经验条件熵之差。这个差也成为了**互信息**(mutual information)，和决策树学习中的信息增益等价。
 
 ## 信息增益比
