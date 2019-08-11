@@ -26,9 +26,18 @@
 * 选择准则：**信息增益(information gain)** 或 **信息增益比(information gain ratio)**
 
 ## 信息增益
-* 熵(entropy)表示随机变量不确定性的度量。条件熵(conditional entropy)是在已知随机变量X的条件下随机变量Y的不确定性。当熵和条件熵的概率由数据估计得到时，则成为**经验熵(empirical entropy)**和**经验条件熵(emperial conditional entropy)**。
-* 信息增益定义为集合的经验熵和某特征给定条件下集合的经验条件熵之差。这个差也成为了**互信息**(mutual information)，和决策树学习中的信息增益等价。
+* 熵(entropy)表示随机变量不确定性的度量。
+* 条件熵(conditional entropy)是在已知随机变量X的条件下随机变量Y的不确定性。随机变量X给定的条件下随机变量Y的条件熵，定义为X给定条件下Y的条件概率分布的熵对X的数学期望。
+$$H(Y|X)=\sum_{i=1}^np_iH(Y|X=x_i)，其中p_i=P(X=x_i),i=1,2,...,n.$$
+
+* 当熵和条件熵的概率由数据估计得到时，则成为**经验熵(empirical entropy)**和**经验条件熵(emperial conditional entropy)**。
+* 信息增益(information gain)表示得知特征X的信息而使得类Y的信息的不确定性减少的程度，定义为集合的经验熵和某特征给定条件下集合的经验条件熵之差。
+$$g(D,A)=H(D)-H(D|A)$$
+这个差也成为了**互信息**(mutual information)，和决策树学习中的信息增益等价。
 
 ## 信息增益比
 * 以信息增益作为划分训练数据集的特征，存在偏向于选择取值较多的特征的问题。信息增益比可以校正这一问题。
-  $$g_R(D,A)=\frac{g(D,A)}{H_A(D)}$$
+  $$g_R(D,A)=\frac{g(D,A)}{H_A(D)}, H_A(D)=-\sum^n_{i=1}\frac{|D_i|}{|D|}log_2\frac{|D_i|}{|D|}$$
+
+## 根据信息增益准则的特征选择方法
+* 对于训练集D，计算每个特征的信息增益，并比较他们的大小，选择信息增益最大的特征。
